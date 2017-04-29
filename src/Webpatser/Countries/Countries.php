@@ -2,6 +2,7 @@
 
 namespace Webpatser\Countries;
 
+use Config;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -29,7 +30,7 @@ class Countries extends Model {
      */
     public function __construct()
     {
-       $this->table = \Config::get('countries.table_name');
+       $this->table = Config::get('countries.table_name');
     }
 
     /**
